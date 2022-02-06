@@ -1,0 +1,65 @@
+// {
+//     "extends": ["react-app","airbnb", "prettier", "plugin:node/recommended"],
+//     "plugins": ["prettier"],
+
+//         "parser": "babel-eslint",
+//         "parserOptions": {
+//             "ecmaVersion": 2015 ,
+//           "sourceType": "module",
+//           "allowImportExportEverywhere": true
+//         },
+//     "rules": {
+//       "prettier/prettier": "warn",
+//       "no-unused-vars": "warn",
+//       "no-console": "off",
+//       "func-names": "off",
+//       "no-process-exit": "off",
+//       "object-shorthand": "off",
+//       "class-methods-use-this": "off"
+//     }
+//   }
+
+{
+  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+    // allow jsx syntax in js files (for next.js project)
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "spaced-comment": "off",
+    "no-console": "warn",
+    "consistent-return": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "no-process-exit": "off",
+    "no-param-reassign": "off",
+    "no-return-await": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "version": ">=13.0.0",
+        "ignores": ["modules"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "js": "ignorePackages"
+      }
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

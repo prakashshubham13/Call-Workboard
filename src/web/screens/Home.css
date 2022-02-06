@@ -1,0 +1,20 @@
+.Home {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent
+    radial-gradient(closest-side at 50% 50%, #58687e 0%, #39495e 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/* Optional: show position indicator in red */
+body::-webkit-scrollbar-thumb {
+  display: none;
+}
+small: {
+  background-color: "red";
+}
